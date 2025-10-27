@@ -1,0 +1,5 @@
+hadoop jar /shared_volume/hadoop_lab-1.0-SNAPSHOT-HadoopFileStatus.jar /user/root/input purchases.txt achats.txt
+
+hadoop jar /shared_volume/hadoop_lab-1.0-SNAPSHOT-ReadHDFS.jar /user/root/input/achats.txt
+
+hadoop jar /shared_volume/hadoop_lab-1.0-SNAPSHOT-HDFSWrite.jar /input/bonjour.txt "Bonjour depuis HDFSWrite"
