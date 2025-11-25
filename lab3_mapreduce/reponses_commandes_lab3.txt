@@ -4,7 +4,7 @@ hdfs dfs -rm -r /user/root/output /user/root/output_py 2>/dev/null
 
 hadoop jar /shared_volume/WordCount.jar /user/root/input/achats.txt /user/root/output
 
-hdfs dfs -cat /user/root/output/part-r-00000 | head -20
+hdfs dfs -cat /user/root/output/part-r-00000 | tail -20
 
 hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.2.0.jar \
 -files /shared_volume/mapper.py,/shared_volume/reducer.py \
@@ -13,7 +13,7 @@ hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.2.0.jar \
 -input /user/root/input/achats.txt \
 -output /user/root/output_py
 
-hdfs dfs -cat /user/root/output_py/part-00000 | head -20
+hdfs dfs -cat /user/root/output_py/part-00000 | tail -20
 
 Comparaison: 
 
